@@ -1,10 +1,9 @@
-import logo from './logo.svg';
 import './App.css';
 
 const App = () => {
   return (
     <div>
-      
+      <h1>test</h1>
     </div>
   )
 }
