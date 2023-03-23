@@ -1,10 +1,23 @@
 import './App.css';
+import React from 'react';
+import { Navbar, Footer, Welcome, About } from './components';
 
 const App = () => {
   return (
     <div>
-      <h1>test</h1>
+      
+      <div className='container'>
+      <Navbar/>
+        <section className='App-starterpage'>
+          <Welcome />
+        </section>
+        <section className='App-about'>
+          <About/>
+        </section>
+        <Footer/>
+      </div>
     </div>
+
   )
 }
 
