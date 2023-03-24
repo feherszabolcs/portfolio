@@ -3,19 +3,7 @@ import './welcome.css'
 
 const Welcome = () => {
 
-    const [letter, setLetter] = useState("Üdvözöllek")
-    const [author, setAuthor] = useState(" ")
 
-    function mouseEnter() {
-
-
-        setLetter("Üdvözöllek az oldalomon!")
-        setAuthor("~Fehér Szabolcs~")
-    }
-    function mouseDown() {
-        setLetter("Üdvözöllek")
-        setAuthor(" ")
-    }
     const words = ["Fehér Szabolcs", "Szoftverfejlesztő", "Webszerkeztő", "Fehér Szabolcs."];
     const [index, setIndex] = useState(0);
     const [subIndex, setSubIndex] = useState(0);
@@ -46,6 +34,7 @@ const Welcome = () => {
             150, parseInt(Math.random() * 350)));
 
         return () => clearTimeout(timeout);
+            // eslint-disable-next-line
     }, [subIndex, index, reverse]);
 
     useEffect(() => {
@@ -61,11 +50,6 @@ const Welcome = () => {
             <h1>
                 {`${words[index].substring(0, subIndex)}${blink ? "|" : " "}`}
             </h1>
-
-            <div className="welcome-animated">
-
-                <h3 id="welcome-author">{author}</h3>
-            </div>
 
         </div>
     )

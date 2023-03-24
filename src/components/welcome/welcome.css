@@ -17,6 +17,9 @@ body {
     background-size: cover;
 }
 
+
+
+/*
 #welcome-title {
     position: relative;
     font-size: 5rem;
@@ -46,8 +49,4 @@ body {
     z-index: -1;
     transition: transform .3s ease;
 }
-
-#welcome-author {
-    color: grey;
-
-}
+*/
