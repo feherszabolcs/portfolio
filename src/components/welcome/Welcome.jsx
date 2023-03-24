@@ -16,7 +16,7 @@ const Welcome = () => {
         setLetter("Üdvözöllek")
         setAuthor(" ")
     }
-    const words = ["Szoftverfejlesztő", "Webszerkeztő", "Fehér Szabolcs."];
+    const words = ["Fehér Szabolcs", "Szoftverfejlesztő", "Webszerkeztő", "Fehér Szabolcs."];
     const [index, setIndex] = useState(0);
     const [subIndex, setSubIndex] = useState(0);
     const [blink, setBlink] = useState(true);
