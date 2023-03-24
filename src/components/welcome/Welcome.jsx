@@ -1,30 +1,70 @@
-import React, { useState } from "react";
+import React, { useState,useEffect } from "react";
 import './welcome.css'
 
-const Welcome = () =>{
+const Welcome = () => {
 
-    const[letter,setLetter] = useState("Üdvözöllek")
-    const[author,setAuthor] = useState(" ")
-    
-    function mouseEnter(){
+    const [letter, setLetter] = useState("Üdvözöllek")
+    const [author, setAuthor] = useState(" ")
+
+    function mouseEnter() {
 
 
         setLetter("Üdvözöllek az oldalomon!")
         setAuthor("~Fehér Szabolcs~")
     }
-    function mouseDown(){
+    function mouseDown() {
         setLetter("Üdvözöllek")
         setAuthor(" ")
     }
+    const words = ["Szoftverfejlesztő", "Webszerkeztő", "Fehér Szabolcs."];
+    const [index, setIndex] = useState(0);
+    const [subIndex, setSubIndex] = useState(0);
+    const [blink, setBlink] = useState(true);
+    const [reverse, setReverse] = useState(false);
 
+    useEffect(() => {
+        if (index === words.length - 1 && subIndex === words[index].length) {
+            return;
+        }
+        if (
+            subIndex === words[index].length + 1 &&
+            index !== words.length - 1 &&
+            !reverse
+        ) {
+            setReverse(true);
+            return;
+        }
+        if (subIndex === 0 && reverse) {
+            setReverse(false);
+            setIndex((prev) => prev + 1);
+            return;
+        }
 
+        const timeout = setTimeout(() => {
+            setSubIndex((prev) => prev + (reverse ? -1 : 1));
+        }, Math.max(reverse ? 75 : subIndex === words[index].length ? 1000 :
+            150, parseInt(Math.random() * 350)));
 
-    return(
+        return () => clearTimeout(timeout);
+    }, [subIndex, index, reverse]);
+
+    useEffect(() => {
+        const timeout2 = setTimeout(() => {
+            setBlink((prev) => !prev);
+        }, 500);
+        return () => clearTimeout(timeout2);
+    }, [blink]);
+
+    return (
         <div className="welcome-message">
-            <div className="welcome-animated">
-            <h1 id="welcome-title" onMouseEnter={mouseEnter} onMouseLeave={mouseDown}>{letter}</h1>
 
-            <h3 id="welcome-author">{author}</h3>
+            <h1>
+                {`${words[index].substring(0, subIndex)}${blink ? "|" : " "}`}
+            </h1>
+
+            <div className="welcome-animated">
+
+                <h3 id="welcome-author">{author}</h3>
             </div>
 
         </div>
