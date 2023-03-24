@@ -15,6 +15,26 @@ section{
     align-items: center;
     scroll-snap-align: start;
 }
+section.App-navbar{
+    height: 5vh;
+    display: flex;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+    scroll-snap-align: start;
+    position: fixed;
+    background-color: rgb(0,0,0);
+    background-color: rgba(0,0,0, 0.4);   
+}
+section.App-footer{
+    height: 7vh;
+    display: flex;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+    scroll-snap-align: start;
+    position: fixed;
+}
 .container{
     scroll-snap-type: y mandatory;
     overflow-y: scroll; 

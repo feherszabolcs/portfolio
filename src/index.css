@@ -5,6 +5,8 @@
   scroll-behavior: smooth;
   scrollbar-width: none;
   -ms-overflow-style: none;
+  -webkit-transition: all 0s ease-out !important; 
+  transition: all 0s ease-out !important;
 }
 ::-webkit-scrollbar {
   display: none;
