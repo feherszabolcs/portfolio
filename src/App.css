@@ -33,7 +33,6 @@ section.App-footer{
     justify-content: center;
     align-items: center;
     scroll-snap-align: start;
-    position: fixed;
 }
 .container{
     scroll-snap-type: y mandatory;
@@ -43,3 +42,4 @@ section.App-footer{
 .App-about{
     background-color: gray;
 }
+/*--------------------------TEST---------------*/

@@ -1,4 +1,4 @@
-.welcome-message{
+.welcome-message {
     font-size: 3rem;
     min-height: 100vh;
     display: flex;
@@ -9,6 +9,45 @@
     color: white;
     text-align: center;
 }
-body{
+
+body {
     overflow: hidden;
+    background-image: url(/src/design/bg-welcome.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+#welcome-title {
+    position: relative;
+    font-size: 5rem;
+    border-bottom: 0.3px solid white;
+}
+
+#welcome-title::before {
+    transform: scaleX(0);
+    transform-origin: bottom right;
+}
+
+#welcome-title:hover::before {
+    transform: scaleX(1);
+    transform-origin: bottom left;
+}
+
+#welcome-title::before {
+    content: " ";
+    display: block;
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    inset: 0 0 0 0;
+    background: hsla(200, 100%, 80%, 0.432);
+    z-index: -1;
+    transition: transform .3s ease;
+}
+
+#welcome-author {
+    color: grey;
+
 }

@@ -1,11 +1,12 @@
 import './App.css';
 import React from 'react';
 import { Navbar, Footer, Welcome, About } from './components';
-
+import { particlesCursor } from 'threejs-toys'
 const App = () => {
+
+
   return (
-    <div>
-      <div className='container'>
+      <div className='container' id='app'>
         <section className='App-navbar'>
           <div className='bg-blur'>
             <Navbar />
@@ -21,7 +22,6 @@ const App = () => {
           <Footer />
         </section>
       </div>
-    </div>
 
   )
 }
