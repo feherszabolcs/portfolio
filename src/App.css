@@ -1,4 +1,13 @@
-#app canvas{
+#app {
+    color: #ffffff;
+    font-family: 'Montserrat', sans-serif;
+    text-align: center;
+    text-shadow: 0 0 5px #ffffff, 0 0 20px #000, 0 0 30px #000;
+    scroll-snap-type: y mandatory;
+    overflow-y: scroll; 
+    height: 100vh;
+  }
+  #app canvas {
     display: block;
     position: fixed;
     z-index: -1;
@@ -10,9 +19,8 @@
     box-sizing: border-box;
     font-family: 'Courier New', Courier, monospace;
 }
-body {
-    background: rgb(20, 13, 145);
-    background: linear-gradient(326deg, rgba(20, 13, 145, 1) 0%, rgba(180, 126, 179, 1) 100%);
+body{
+    background-color: #000;
 }
 section{
     height: 100vh;
@@ -39,11 +47,6 @@ section.App-footer{
     justify-content: center;
     align-items: center;
     scroll-snap-align: start;
-}
-.container{
-    scroll-snap-type: y mandatory;
-    overflow-y: scroll; 
-    height: 100vh;
 }
 .App-about{
     background-color: gray;

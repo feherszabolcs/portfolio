@@ -10,12 +10,6 @@
     text-align: center;
 }
 
-body {
-    overflow: hidden;
-    background-image: url(/src/design/bg-welcome.png);
-    background-repeat: no-repeat;
-    background-size: cover;
-}
 
 
 
