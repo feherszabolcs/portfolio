@@ -37,11 +37,6 @@ const App = () => {
   return (
      
       <div className='container' id='app'>
-        <section className='App-navbar'>
-          <div className='bg-blur'>
-            <Navbar />
-          </div>
-        </section>
         <section className='App-starterpage'>
           <Welcome />
         </section>

@@ -49,8 +49,18 @@ section.App-footer{
     scroll-snap-align: start;
     /* background: linear-gradient(6deg, rgba(10,10,10,1) 0%, rgba(0,0,0,1) 100%); */
 }
-.App-about{
-    background: rgb(0,0,0);
-    /* background: linear-gradient(6deg, rgba(10,10,10,1) 0%, rgba(0,0,0,1) 100%); */
+section.App-about{
+    background-color: #000;
 }
+section.App-starterpage{
+    height: 100vh;
+    display: flex;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+    scroll-snap-align: start;
+    background-color: rgb(0,0,0);
+    background-color: rgba(0,0,0, 0.4);   
+}
+
 
